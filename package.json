@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "sass": "sass",
-    "build": "sass --watch main.scss style.css"
+    "sass": "sass --watch main.scss style.css"
   },
   "devDependencies": {
     "bootstrap": "^5.3.3",
