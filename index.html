@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckSpeech AI - API de Inteligência Artificial para Conversão e Interpretação de Falas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top menu flutuante -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="index.html">CheckSpeech AI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="solutions" href="#solutions">Soluções</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="clients" href="#clients">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pricing" href="#pricing">Preços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact" href="#contact">Contato</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="language">
+      
+      <select id="language-select" onchange="changeLanguage()">
+        <option value="en" >English</option>
+        <option value="pt" selected>Português</option>
+        <option value="es">Español</option>
+      </select> 
+
+      <img id="translate" src="src/img/pt.png" alt="translate">
+    </div>
+  </nav>
+
+  <!-- Seção inicial -->
+  <section class="hero d-flex align-items-center flex-md-column">
+    <div class="container AI">
+        <img src="src/img/robot.jpg" alt="">
+    </div>
+    <div class="container text-center">
+      <h1 class="display-4">CheckSpeech AI</h1>
+      <p class="lead" id="lead">Transforme falas em insights com nossa poderosa <br><span >API de Inteligência Artificial.</span></p>
+    </div> 
+  </section>
+
+  <section class="api">
+    <div class="container">
+        <p id="description"><span class="highlights">CheckSpeech AI</span>  é um conjunto de APIs de conversão de fala em textos, bem como a interpretação do sentimento dominante nos dizeres. Nossa solução é treinada em mais de 500.000 horas de áudios, transcritos por humanos de uma ampla variedade de idades, nacionalidades, sotaques e níveis de instruções A API é comercializada no modelo SAAS (software as a service).</p>
+    </div>
+  </section>
+
+  <section id="solutions" class="py-5">
+    <div class="container">
+      <h2 id="title" class="text-center mb-5 highlights">Soluções</h2>
+      <div id="carouselSolutions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-6">
+                <h3 id="audio">Transcrição de Áudio <span class="highlights">Assíncrono</span></h3>
+                <p id="audio_text">API de transcrição de voz assíncrona para áudio pré-gravado. Temos uma das melhores engines de reconhecimento de fala do mundo! O recurso speech-to-text assíncrono é um parceiro estratégico para o seu negócio. Esteja você extraindo insights de áudio ou transcrevendo conteúdo em escala.</p>
+              </div>
+              <div class="col-lg-6">
+                <img src="https://via.placeholder.com/400" class="d-block mx-auto" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6">
+                <h3 id="real_time">Transcrição de Áudio em <span class="highlights">tempo real</span></h3>
+                <p id="time_text">O recurso live-speech-to-text de transcrição ao vivo possibilita o uso de legendas em tempo real para o seu negócio. Nossas legendas garantem que as palestras e treinamentos ao vivo sejam acessíveis e possam ser arquivadas para uso futuro.</p>
+              </div>
+              <div class="col-lg-6">
+                <img src="https://via.placeholder.com/400" class="d-block mx-auto" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6">
+                <h3 id="Identification">Identificação de <span class="highlights">idiomas</span></h3>
+                <p id="identificationGlobal">Obtendo fala e insights a nível global. Nossa solução tem suporte a 52 idiomas.</p>
+              </div>
+              <div class="col-lg-6">
+                <img src="https://via.placeholder.com/400" class="d-block mx-auto" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6">
+                <h3 id="Analysis">Análise de <span class="highlights">sentimento</span> a partir do áudio</h3>
+                <p id="AnalysisP">Encontre os momentos mais importantes em trechos de falas, diferencie falas positivas e negativas e tome decisões de negócios mais assertivas com uma compreensão mais profunda.</p>
+              </div>
+              <div class="col-lg-6">
+                <img src="https://via.placeholder.com/400" class="d-block mx-auto" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselSolutions" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselSolutions" data-bs-slide-to="1" class="active"></li>
+            <li data-bs-target="#carouselSolutions" data-bs-slide-to="2" class="active"></li>
+            <li data-bs-target="#carouselSolutions" data-bs-slide-to="3" class="active"></li>
+          </ol>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Seção de Clientes -->
+  <section id="clients" class="container">
+    <h2>Clientes</h2>
+    <!-- Lista de clientes -->
+    <ul>
+      <li>Cliente 1</li>
+      <li>Cliente 2</li>
+      <!-- Adicione mais clientes conforme necessário -->
+    </ul>
+  </section>
+
+   <!-- Seção de Preços -->
+  <section class="pricing py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Plano Basic -->
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Plano Basic</h5>
+              <h6 class="card-price text-center">R$29<span class="period">/mês</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Transcrição de Áudio Assíncrono</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Identificação de Idiomas em Áudios</li>
+              </ul>
+              <a href="#" class="btn btn-block btn-primary text-uppercase">Assine Agora</a>
+            </div>
+          </div>
+        </div>
+        <!-- Plano Business -->
+        <div class="col-lg-4">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Plano Business</h5>
+              <h6 class="card-price text-center">R$44<span class="period">/mês</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Transcrição de Áudio Assíncrono</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Transcrição de Áudio em Tempo Real</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Identificação de Idiomas em Áudios</li>
+              </ul>
+              <a href="#" class="btn btn-block btn-primary text-uppercase">Assine Agora</a>
+            </div>
+          </div>
+        </div>
+        <!-- Plano Enterprise -->
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Plano Enterprise</h5>
+              <h6 class="card-price text-center">Preço Sob Consulta</h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Transcrição de Áudio Assíncrono</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Transcrição de Áudio em Tempo Real</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Identificação de Idiomas em Áudios</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Análise de Sentimento a Partir do Áudio</li>
+              </ul>
+              <a href="#" class="btn btn-block btn-primary text-uppercase">Entre em Contato</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Contato -->
+  <section id="contact" class="container">
+    <h2>Contato</h2>
+    <!-- Formulário de contato -->
+    <form>
+      <div class="form-group">
+        <label for="name">Nome *</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone *</label>
+        <input type="tel" class="form-control" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="country">País *</label>
+        <select class="form-control" id="country" required>
+          <option value="brasil">Brasil</option>
+          <option value="eua">Estados Unidos</option>
+          <!-- Adicione mais países conforme necessário -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="consent" required>
+        <label class="form-check-label" for="consent">Eu concordo com a Política de Privacidade.</label>
+      </div>
+      <!-- Adicione o Captcha de sua escolha aqui -->
+      <button type="submit" class="btn btn-primary mt-3 mb-5">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>&copy; 2024 CheckSpeech AI. Todos os direitos reservados.</p>
+        </div>
+        <div class="col">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Soluções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="translate.js"></script>
+</body>
+</html>
