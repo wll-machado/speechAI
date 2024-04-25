@@ -44,7 +44,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 0 20px;
-
+    display: flex;
     a{
         color: #fff;
         &:hover{
@@ -62,6 +62,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.1s ease;
     img{
         width: 25px;
         margin-left: 3px;
@@ -173,6 +174,9 @@ footer {
         text-align: center;
         font-size: 1.5rem;
         
+    }
+    .navbar-collapse.collapse.show ~ .language{
+        margin: 2vh auto;        
     }
     .hero {
         flex-direction: column !important;
