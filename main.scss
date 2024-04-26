@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 $maincolor: #8a30f8;
 $lightmaincolor: #ad6aff86;
 $bgcolor: #0e0c16;
@@ -22,7 +24,7 @@ body {
     }
 .api{
     background-color: #ae70f926;
-    padding: 10vh 0;
+    padding: 2.5vh 0;
     font-weight: 500;
     
 }
@@ -100,7 +102,8 @@ body {
         img {
             position: relative;
             width: 100%;
-            top: -280px;
+            height: 100vh;
+            top: -250px;
         }
     }
 
@@ -166,6 +169,17 @@ section {
 
 footer {
     margin-top: 50px;
+    background-color: $maincolor ;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    
+    .col {
+        ul li a {
+            color: #fff;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -182,11 +196,12 @@ footer {
         flex-direction: column !important;
 
         .AI {
-            height: 30%;
+            height: 11rem;
             width: 100vw;
 
             img {
-                top: -130px;
+                height: 50vh;
+                top: -110px;
             }
         }
 
@@ -199,6 +214,46 @@ footer {
     
                 span {
                     font-size: 38px;
+                }
+            }
+        }
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
+        height: auto;
+       .container{
+        height: 100%;
+        display: flex;
+       
+       }
+        
+        .col:nth-child(1) {
+            width: 50%;
+            height: 50%;
+            font-size: 12px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            margin: auto 0;
+
+        }
+
+        .col:nth-child(2){
+            height: 100%;
+            
+            display: flex;
+            flex-wrap:wrap;
+
+            ul{
+                width: 100%;
+                display: flex;
+                
+
+                li{
+                    width: 50%;
                 }
             }
         }
